@@ -1,3 +1,24 @@
+/*	
+    FIBONACCI
+	Challenge #1, Difficulty #1 (beginner-friendly) 	
+	Suggested language: Java, C++, Python
+	Languages you shouldnt use: Assembler :P
+
+	void task() {
+		Take two integers as input by the user.
+
+		Now calculate atleast 10 iterations of the Fibonacci-sequence with the two integers as starting point.
+
+		Output those calculations.
+	}
+
+	void extraTask () {
+		1) ask the user how many iterations of the Fibonacci sequence the program should calculate
+
+		2) If one number in the sequence is divisible by x (let the user input that too), output "FIZZ" instead of it
+	}
+*/
+
 #include<bits/stdc++.h>
 #define ll long long int
 
