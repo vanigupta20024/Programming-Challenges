@@ -178,7 +178,7 @@ struct array *merge(struct array arr1, struct array arr2){
 	while(j<arr2.length){
 		arr3->a[k] = arr2.a[j];
 		k++;
-		i++;
+		j++;
 	}
 	
 	return arr3;
