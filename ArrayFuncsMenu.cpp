@@ -1,3 +1,20 @@
+/*
+	Includes various array functions:
+	1. Insert
+	2. Display
+	3. Append
+	4. Delete
+	5. Linear search
+	6. Binary search
+	7. Get item
+	8. Set item
+	9. Reverse
+	10. Is sorted?
+	11. Rearrange
+	12. Merge, intersection and difference
+	
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
