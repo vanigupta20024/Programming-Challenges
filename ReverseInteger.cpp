@@ -1,3 +1,10 @@
+/* Given a 32-bit signed integer, reverse digits of an integer.
+*
+*
+*
+*
+*/
+
 class Solution {
 public:
     int reverse(long int x) {
