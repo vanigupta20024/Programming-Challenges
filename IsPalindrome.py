@@ -1,4 +1,5 @@
 # GHC_Codepath
+# Sandbox - 3
 # SE101: Is Palindrome?
 
 #!/bin/python3
@@ -26,15 +27,18 @@ def isPalindrome(a):
     for i in range(len(a)):
         if a[i].isalpha():
             new_string += a[i].lower()
+            
+    # another way:
     # i = 0
     # j = len(new_string) - 1
+    ## checking the lest and right halves
     # while i < j:
     #     if new_string[i] !=new_string[j]:
     #         return 0
     #     i += 1
     #     j -= 1
     # return 1
-    # another way:
+
     if new_string == new_string[::-1]:
             return 1
     else: return 0
