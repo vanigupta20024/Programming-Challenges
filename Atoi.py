@@ -1,6 +1,6 @@
 # GHC_Codepath
-
-# 1. SE101:Module 3:String to Integer (ATOI) 
+# Sandbox - 3
+# 1. SE101:String to Integer (ATOI) 
 
 # Implement atoi which converts a string to an integer. 
 
