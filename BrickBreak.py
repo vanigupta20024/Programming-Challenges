@@ -1,3 +1,7 @@
+# GHC Codepath SE101 
+# Sandbox - 4
+# BASIC
+
 #!/bin/python3
 
 import math
