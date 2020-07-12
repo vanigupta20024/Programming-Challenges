@@ -1,4 +1,10 @@
-# Tk tutorial
+''' 
+Tk tutorial - Basic level calculator
+which handles addition, subtraction, division, multiplication 
+and modulo (limited to two operands only at the moment.
+Zero division errors are checked for division and modulo.
+Level - Basic
+'''
 
 # from tkinter import everything
 from tkinter import *
