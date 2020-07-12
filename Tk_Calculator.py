@@ -33,6 +33,7 @@ def onAdd():
 	operation = "add"
 	e.delete(0, END)
 
+# subtract function
 def onSub():
 	global first 
 	global operation
@@ -40,6 +41,7 @@ def onSub():
 	operation = "sub"
 	e.delete(0, END)
 
+# multiply function
 def onMul():
 	global first 
 	global operation
@@ -47,6 +49,7 @@ def onMul():
 	operation = "mul"
 	e.delete(0, END)
 
+# divide function
 def onDiv():
 	global first 
 	global operation
@@ -54,6 +57,7 @@ def onDiv():
 	operation = "div"
 	e.delete(0, END)
 
+# Modulus function
 def onMod():
 	global first 
 	global operation
@@ -62,8 +66,11 @@ def onMod():
 	e.delete(0, END)
 
 def onEqual():
+	
+	# second number to input
 	sn = e.get()
 	e.delete(0, END)
+	
 	if operation == "add":
 		e.insert(0, int(first) + int(sn))
 	if operation == "sub":
@@ -71,6 +78,8 @@ def onEqual():
 	if operation == "mul":
 		e.insert(0, int(first) * int(sn))
 	if operation == "div":
+		
+		# when having numerator or deniminator as zero
 		if int(sn) == 0:
 			e.insert(0, "Not Defined")
 			return
@@ -79,6 +88,8 @@ def onEqual():
 			return
 		e.insert(0, int(first) / int(sn))
 	if operation == "mod":
+		
+		# validation checks
 		if int(sn) == 0:
 			e.insert(0, "Not Defined")
 			return
@@ -129,4 +140,5 @@ b_equal.grid(row = 4, column = 2)
 b_clear.grid(row = 5, column = 1)
 back.grid(row = 5, column = 0)
 
+# starts here!
 root.mainloop()
