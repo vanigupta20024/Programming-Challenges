@@ -1,3 +1,7 @@
+# GHC Codepath SE101
+# Sandbox - 5
+# Intermediate
+
 # The function is expected to return a BOOLEAN.
 # The function accepts 2D_STRING_ARRAY board as parameter.
 # The function will analyze board, determine if it
