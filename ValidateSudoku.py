@@ -45,7 +45,24 @@ def isValidSudoku(board):
                 s += board[i][j]
         if len(s) != len(set(s)):
             return False
-
+        
+    # check columns
+    for i in range(len(board)):
+        s = ""
+        for j in range(len(board)):
+            if board[j][i].isdigit():
+                s += board[j][i]
+        if len(s) != len(set(s)):
+            return False
+        
+    # boxes
+    for i in range(0, 9, 3):
+        s = ""
+        for j in range(0, 9, 3):
+            if board[i][j].isdigit():
+                s += board[i][j]
+        if len(s) != len(set(s)):
+            return False
 
     return True
 
