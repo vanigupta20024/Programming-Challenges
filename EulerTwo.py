@@ -5,13 +5,11 @@
 sum = 0
 f = 1
 s = 2
-x = 0
-while True:
-	x = f + s
-	if x >= 4000000:
-		break
+x = s
+while x < 4000000:
 	if x % 2 == 0:
 		sum += x
+	x = f + s
 	f, s = s, x
 
 print(sum)
