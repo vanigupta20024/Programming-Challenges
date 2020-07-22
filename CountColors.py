@@ -9,13 +9,18 @@ import random
 import re
 import sys
 
+'''
+"(255,0,0)(255,0,0)(255,0,0)(0,255,0)(0,255,0)(0,255,0)(0,0,255)(0,0,255)(0,0,255)" 
 
+with an image of size 3, should return:
+
+"3x(255,0,0)3(0,255,0)3(0,0,255)3"
+'''
 
 # The function is expected to return a STRING.
 # The function accepts following parameters:
 #  1. STRING colors
 #  2. INTEGER size
-#
 
 def countColors(colors, size):
     s = str(size) + "x"
