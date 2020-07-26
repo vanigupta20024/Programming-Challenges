@@ -40,7 +40,8 @@ def alpha(s):
     engine.runAndWait()
 
 def clear():
-
+	global st
+	st = ""
 	str1.set('Alphabet application for kids!')
 	engine.say('Alphabet application for kids!')
 	engine.runAndWait()
