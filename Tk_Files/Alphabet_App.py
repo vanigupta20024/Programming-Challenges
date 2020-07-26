@@ -1,5 +1,3 @@
-# Simple alphabet application for kids 
-# press any button -> Letter appears and is audible (text to speech)
 
 from tkinter import *
 import pygame
@@ -33,12 +31,13 @@ img = ImageTk.PhotoImage(Image.open(image_bytes))
 image = disp.create_image(68, 60, image = img)
 
 #=============================Button===========================#
-
+st = ""
 def alpha(s):
-
-	str1.set("Letter pressed: {}".format(s))
-	engine.say("Letter pressed: {}".format(s))
-	engine.runAndWait()
+    global st 
+    st += s
+    str1.set(st)
+    engine.say(st)
+    engine.runAndWait()
 
 def clear():
 
