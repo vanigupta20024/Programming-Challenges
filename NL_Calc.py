@@ -1,12 +1,12 @@
-#!/bin/python3
+# GHC Codepath - Sandbox - 8
 
+#!/bin/python3
 
 import math
 import os
 import random
 import re
 import sys
-
 
 # Calculator to parse natural language and speak in natural language
 # - Only given 2 operands and all operands < 100
