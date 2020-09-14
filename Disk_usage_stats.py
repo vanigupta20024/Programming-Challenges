@@ -20,6 +20,11 @@ def get_size(path):
     return total
 
 if __name__ == '__main__':
+    
+    # if you're running this in linux, change the default path to "/home"
+    # also run the code as "sudo python3 Disk_usage.py" or "sudo ./Disk_usage.py"
+    # i.e, with super user permissions
+    
     path = "C:/Users/"
     print("Total arguments passed: ", len(sys.argv))
 
