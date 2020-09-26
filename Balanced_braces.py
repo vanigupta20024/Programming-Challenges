@@ -1,3 +1,10 @@
+'''
+Input Format
+
+The first line contains a single integer, n, denoting the number of strings.
+Each line i of the n subsequent lines consists of a single string,s, denoting a sequence of brackets.
+'''
+
 #!/bin/python3
 
 import math
