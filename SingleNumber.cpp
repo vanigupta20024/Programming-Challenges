@@ -18,7 +18,7 @@ public:
             7 ^ 5 = 2 and so on..
             Also,
             any number when XORed with 0, returns itself. So we populate the
-            integer x with first number and perform XOR will numbers.
+            integer x with first number and perform XOR with numbers.
             The remaining number will be the one that does not cancel itself.
         */
         
