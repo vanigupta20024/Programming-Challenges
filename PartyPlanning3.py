@@ -1,8 +1,8 @@
 ## The bakery wants to be able to sell it's in-stock orders first. Take in a second dictionary and distinguish between the in-stock items before ordering new items. Return a dictionary of in-stock ("stock") vs made-to-order ("custom") items.
 ## Input:
-# large_party_size = 200
-# menu = {"cakes": 25, "pies": 8, "cupcakes": 1 }
-# in_stock = {"cakes": 1, "pies": 4, "cupcakes": 100 }
+large_party_size = 200
+menu = {"cakes": 25, "pies": 8, "cupcakes": 1 }
+in_stock = {"cakes": 1, "pies": 4, "cupcakes": 100 }
 ## output format:
 # order = {"stock_cake": 1, "stock_pies": 4, "stock_cupcakes": 100, "custom_cake": 1, "custom_pies": 2, "custom_cupcakes": 2 }
 def getname(dessert, is_stock):
@@ -38,4 +38,4 @@ def order_with_stock(party_size, in_stock, menu):
       i += 1
   print(answer)
 
-order_with_stock(200, in_stock, menu)
+order_with_stock(large_party_size, in_stock, menu)
