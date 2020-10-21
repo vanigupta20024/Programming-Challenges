@@ -1,4 +1,4 @@
-## S2 (hard): The bakery wants to be able to sell it's in-stock orders first. Take in a second dictionary and distinguish between the in-stock items before ordering new items. Return a dictionary of in-stock ("stock") vs made-to-order ("custom") items.
+## The bakery wants to be able to sell it's in-stock orders first. Take in a second dictionary and distinguish between the in-stock items before ordering new items. Return a dictionary of in-stock ("stock") vs made-to-order ("custom") items.
 ## Input:
 # large_party_size = 200
 # menu = {"cakes": 25, "pies": 8, "cupcakes": 1 }
