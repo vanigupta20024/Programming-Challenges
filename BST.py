@@ -1,4 +1,6 @@
 '''
+Operations performed on BST:
+
 Insert a node in bst
 Search a node in bst
 Find successor
