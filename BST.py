@@ -57,11 +57,11 @@ def delete(root, key):
         elif key > curr.data:
             curr = curr.rchild
     
-    #if curr is none -> node onot found
+    #if curr is none -> node not found
     if curr is None:
         return root
         
-    #no childer -> leaf
+    #no child -> leaf
     if curr.lchild is None and curr.rchild is None:
         if curr != root:
             if curr == parent.lchild:
