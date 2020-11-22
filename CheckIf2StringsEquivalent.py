@@ -28,3 +28,6 @@ class Solution:
             else:
                 return False
         return True
+
+    # Super lazy solution:
+    # return "".join(word1) == "".join(word2)
