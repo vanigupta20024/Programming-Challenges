@@ -20,3 +20,16 @@ def isPerm(s1, s2):
     
 s1, s2 = input().split()
 print(isPerm(s1, s2))
+
+# Method 2
+def isPerm(s1, s2):
+    if len(s1) != len(s2) or len(s1) == 0 or len(s2) == 0: return False
+    s1 = sorted(s1)
+    s2 = sorted(s2)
+    for i in range(len(s1)):
+        if s1[i] != s2[i]:
+            return False
+    return True
+    
+s1, s2 = input().split()
+print(isPerm(s1, s2))
