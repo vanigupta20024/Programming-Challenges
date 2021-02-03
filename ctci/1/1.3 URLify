@@ -1,0 +1,6 @@
+# Replace all spaces in string with "%20".
+
+s = input()
+s = s.split()
+s = "%20".join(s)
+print(s)
