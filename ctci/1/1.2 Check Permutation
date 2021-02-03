@@ -1,0 +1,22 @@
+# Check whether 1 string is a premutation of other
+
+# Method 1
+def isPerm(s1, s2):
+    if len(s1) != len(s2) or len(s1) == 0 or len(s2) == 0: return False
+    d = {}
+    for i in s1:
+        if i in d.keys():
+            d[i] += 1
+        else:
+            d[i] = 1
+    for i in s2:
+        if i in d.keys():
+            d[i] -= 1
+        else: return False
+    for k, v in d.items():
+        if v != 0:
+            return False
+    return True
+    
+s1, s2 = input().split()
+print(isPerm(s1, s2))
