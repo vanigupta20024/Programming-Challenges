@@ -37,7 +37,7 @@ class Solution:
             head = head.next
         return True
         
-# Time: O(N) Space: O(1)
+# Time: O(N) Space: O(N)
 #         stack = []
 #         while head != None:
 #             stack.append(head.val)
