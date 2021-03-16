@@ -10,6 +10,29 @@ turn. The number of available captures for the white rook is the number of pawns
 Return the number of available captures for the white rook.
 '''
 
+# Recursive solution
+class Solution:
+    def numRookCaptures(self, board: List[List[str]]) -> int:
+        
+        def find(rx, ry, direction, count):
+            if rx == 8 or ry == 8 or rx == -1 or ry == -1: return count
+            if board[rx][ry] == "B": return 0
+            if board[rx][ry] == "p": return count + 1
+            if direction == "L": return find(rx, ry - 1, "L", count)
+            elif direction == "R": return find(rx, ry + 1, "R", count)
+            elif direction == "U": return find(rx - 1, ry, "U", count)
+            else: return find(rx + 1, ry, "D", count)
+            
+        rookx = rooky = -1
+        for i in range(len(board)):
+            if "R" in board[i]:
+                rookx, rooky = i, board[i].index("R")
+                break
+                
+        return find(rookx, rooky, "L", 0) + find(rookx, rooky, "R", 0) + find(rookx, rooky, "U", 0) + find(rookx, rooky, "D", 0)
+    
+# Iterative Solution
+
 class Solution:
     def numRookCaptures(self, board: List[List[str]]) -> int:
         rookx, rooky = -1, -1
