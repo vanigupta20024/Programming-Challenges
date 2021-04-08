@@ -6,7 +6,7 @@
 # [1,2,3]
 # Output: []
 # Explaination: The input is already sorted, so there is no need to flip anything.
-Note that other answers, such as [3, 3], would also be accepted.
+# Note that other answers, such as [3, 3], would also be accepted.
 
 #!/bin/python3
 
