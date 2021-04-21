@@ -25,4 +25,4 @@ if matches:
 	print("\n".join(matches))
 	pyperclip.copy("\n".join(matches))
 else:
-	print("No email or number found in text!")
+	print("No URL found in text!")
