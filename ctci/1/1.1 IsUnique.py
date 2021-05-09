@@ -20,7 +20,7 @@ def isUnique(s):
     checker = 0
     for i in range(len(s)):
         val = ord(s[i]) - ord('a')
-        if (checker & (i << val)) > 0:
+        if (checker & (1 << val)) > 0:
             return False
         checker |= (1 << val)
     return True
