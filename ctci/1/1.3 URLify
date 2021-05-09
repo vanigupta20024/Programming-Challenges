@@ -1,5 +1,33 @@
 # Replace all spaces in string with "%20".
 
+Method 1
+
+s = input()
+s = [i for i in s]
+spaces = 0
+
+for i in s:
+    if i == " ": spaces += 1
+i = end = len(s) - 1
+while spaces > 0:
+    if s[i] == " ":
+        while s[i] == " ":
+            i -= 1
+    if s[i] != " ":
+        while s[i] != " ":
+            s[i], s[end] = s[end], s[i]
+            i -= 1
+            end -= 1
+        s[end] = "0"
+        s[end - 1] = "2"
+        s[end - 2] = "%"
+        spaces -= 3
+        end -= 3
+print("".join(s))
+
+
+Method 2
+
 s = input()
 s = s.split()
 s = "%20".join(s)
