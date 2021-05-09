@@ -1,0 +1,31 @@
+# Given two strings, write a function to check if they are one edit or zero edits away.
+
+def one_away(s1, s2):
+    if abs(len(s1) - len(s2)) > 1:
+        return False
+    
+    freq = {}
+    for i in range(len(s1)):
+        freq[s1[i]] = freq.get(s1[i], 0) + 1
+    
+    count = 0
+    for i in s2:
+        if i not in freq.keys(): count += 1
+        else: 
+            freq[i] -= 1
+            if freq[i] < 0:
+                count += 1
+        if count > 1:
+            return False
+    remaining = 0
+    for k, v in freq.items():
+        if v != 0: remaining += 1
+    if len(s1) == len(s2):
+        if remaining + count > 2: return False
+        else: return True
+    elif remaining + count > 1: return False
+    return True
+    
+s1 = input()
+s2 = input()
+print(one_away(s1, s2))
