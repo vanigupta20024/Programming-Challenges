@@ -1,0 +1,22 @@
+# Given a string, write a program to check if it is a palindrome or not
+
+Method 1
+
+Time: O(N)
+Space: O(N)
+
+freq = {}
+s = input()
+
+for i in range(len(s)):
+    if s[i] != " ":
+        freq[s[i].lower()] = freq.get(s[i].lower(), 0) + 1
+
+odd = 0
+for k, v in freq.items():
+    if v % 2 == 1: odd += 1
+
+if odd == 0 or odd == 1:
+    print(True)
+else:
+    print(False)
