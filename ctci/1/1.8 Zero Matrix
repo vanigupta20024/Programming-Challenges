@@ -2,7 +2,7 @@
 
 Method 1
 
-Time O(N)
+Time O(N^2)
 Space O(N)
 
 def zero(a, m, n):
@@ -22,4 +22,40 @@ def zero(a, m, n):
         for j in range(m):
             a[j][c] = 0
     
+    return a
+
+Method 2
+
+Time O(N^2)
+Space O(1)
+
+def zero(a, m, n):
+    null_r = null_c = False
+    
+    for i in range(len(a[0])):
+        if a[0][i] == 0: null_r = True
+    
+    for i in range(len(a)):
+        if a[i][0] == 0: null_c = True
+    
+    def null_rows(r):
+        for i in range(len(a)):
+            a[i][r] = 0
+    
+    def null_cols(c):
+        for i in range(len(a[0])):
+            a[c][i] = 0
+    
+    for i in range(1, len(a)):
+        for j in range(1, len(a[0])):
+            if a[i][j] == 0:
+                a[i][0] = 0
+                a[0][j] = 0
+    
+    for i in range(len(a[0])):
+        if a[0][i] == 0: null_rows(i)
+    for i in range(len(a)):
+        if a[i][0] == 0: null_cols(i)
+    if null_r: null_cols(0)
+    if null_c: null_rows(0)
     return a
