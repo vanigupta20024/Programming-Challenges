@@ -1,0 +1,18 @@
+# Implement basic string compression using counts of repeated characters
+
+def compress(s):
+    ans = ""
+    i = 0
+    while i < len(s):
+        temp = s[i]
+        c = 0
+        while i < len(s) and temp == s[i]:
+            i += 1
+            c += 1
+        ans += temp + str(c)
+    if len(ans) < len(s):
+        return ans
+    return s
+    
+s = input()
+print(compress(s))
