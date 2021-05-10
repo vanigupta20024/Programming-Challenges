@@ -1,5 +1,7 @@
 # Given two strings, write a function to check if they are one edit or zero edits away.
 
+Method 1
+
 def one_away(s1, s2):
     if abs(len(s1) - len(s2)) > 1:
         return False
@@ -24,6 +26,36 @@ def one_away(s1, s2):
         if remaining + count > 2: return False
         else: return True
     elif remaining + count > 1: return False
+    return True
+    
+s1 = input()
+s2 = input()
+print(one_away(s1, s2))
+
+
+Method 2
+
+def one_away(s1, s2):
+    if abs(len(s1) - len(s2)) > 1:
+        return False
+    
+    def one_edit(s1, s2):
+        i = j = count = 0
+        while i < len(s1) and j < len(s2):
+            if s1[i] != s2[j]:
+                if len(s1) < len(s2): j += 1
+                elif len(s1) > len(s2): i += 1
+                else:
+                    i += 1
+                    j += 1
+                count += 1
+            else:
+                i += 1
+                j += 1
+        return count
+    
+    if one_edit(s1, s2) > 1:
+        return False
     return True
     
 s1 = input()
