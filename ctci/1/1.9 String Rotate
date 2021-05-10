@@ -1,0 +1,17 @@
+# Given a method isSubstring, check if a string s2 is a rotation of s1 using only 1 call to isSubstring.
+
+def isSubstring(s1, s2):
+    if s1 in s2:
+        return True
+    return False
+    
+def string_rotate(s1, s2):
+    final = s1 + s1
+    if isSubstring(s2, final):
+        print("Yes")
+    else:
+        print("No")
+    
+s1 = "erbottlewat"
+s2 = "waterbottle"
+string_rotate(s1, s2)
