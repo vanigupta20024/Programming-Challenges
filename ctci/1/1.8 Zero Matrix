@@ -1,0 +1,25 @@
+# If an element in an MXN matrix is zero, its entire row and column elements become zero
+
+Method 1
+
+Time O(N)
+Space O(N)
+
+def zero(a, m, n):
+    count = 0
+    l = []
+    for i in range(m):
+        for j in range(n):
+            if a[i][j] == 0:
+                count += 1
+                l.append([i, j])
+    
+    for i in l:
+        r = i[0]
+        c = i[1]
+        for j in range(n):
+            a[r][j] = 0
+        for j in range(m):
+            a[j][c] = 0
+    
+    return a
